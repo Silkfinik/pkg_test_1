@@ -411,7 +411,8 @@ bRange.addEventListener("input", (e) => {
 //------------------------COLOR-PICKER----------------------------//
 
 colorPicker.addEventListener("input", (e) => {
-  const value = getFloatValue(e);
+  const value = e.target.value;
+  console.log("value", value);
   const rgb = HEXtoRGB(value);
   replaceRGB(rgb);
 
@@ -428,6 +429,7 @@ function RGBtoHEX(r, g, b) {
     "#" +
     ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
 
+  console.log("hex", hex);
   return hex;
 }
 
@@ -587,13 +589,13 @@ function XYZtoLAB(x, y, z) {
 }
 
 function RGBtoHSV(r, g, b) {
-  r = Number(r) * 255;
-  g = Number(g) * 255;
-  b = Number(b) * 255;
-  console.log(r, g, b);
+  console.log("rgb to hsv ", r, g, b);
+
+  // r, g, b уже в диапазоне [0, 1], масштабирование не требуется
   let max = Math.max(r, g, b),
     min = Math.min(r, g, b);
   console.log(max);
+
   let h,
     s,
     v = max;
@@ -618,7 +620,7 @@ function RGBtoHSV(r, g, b) {
     h /= 6;
   }
 
-  return [h, s, v];
+  return [h * 360, s * 100, v * 100];
 }
 
 function XYZtoHSV(x, y, z) {
@@ -728,5 +730,6 @@ function HEXtoRGB(hex) {
   let g = parseInt(hex.substring(2, 4), 16) / 255;
   let b = parseInt(hex.substring(4, 6), 16) / 255;
 
+  console.log("r", r, "g", g, "b", b);
   return [r, g, b];
 }
