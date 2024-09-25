@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minchuk</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <h1>Color converter Minchuk</h1>
+      <div class="text-inputs">
+        <div class="conatiner-text">
+          <div class="container">
+            <label>
+              <span>
+                H:
+              </span>
+              <input type="text" id="hsv_h_text" min="0" max="360">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                S:
+              </span>
+              <input type="text" id="hsv_s_text" min="0" max="100">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                V:
+              </span>
+              <input type="text" id="hsv_v_text" min="0" max="100">
+            </label>
+          </div>
+        </div>
+        <div class="conatiner-text">
+          <div class="container">
+            <label>
+              <span>
+                X:
+              </span>
+              <input type="text" id="xyz_x_text" min="0" max="95.047">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                Y:
+              </span>
+              <input type="text" id="xyz_y_text" min="0" max="100">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                Z:
+              </span>
+              <input type="text" id="xyz_z_text" min="0" max="108.883">
+            </label>
+          </div>
+        </div>
+        <div class="conatiner-text">
+          <div class="container">
+            <label>
+              <span>
+                L:
+              </span>
+              <input type="text" id="lab_l_text" min="0" max="100">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                A:
+              </span>
+              <input type="text" id="lab_a_text" min="-128" max="127">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                B:
+              </span>
+              <input type="text" id="lab_b_text" min="-128" max="127">
+            </label>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="range-inputs">
+        <div class="container-range">
+          <div class="container">
+            <label>
+              <span>
+                H:
+              </span>
+              <input type="range" id="hsv_h_range" min="0" max="360" step="1">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                S:
+              </span>
+              <input type="range" id="hsv_s_range" min="0" max="100" step="0.01">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                V:
+              </span>
+              <input type="range" id="hsv_v_range" min="0" max="100" step="0.01">
+            </label> 
+          </div>
+        </div>
+        <div class="container-range">
+          <div class="container">
+            <label>
+              <span>
+                X:
+              </span>
+              <input type="range" id="xyz_x_range" min="0" max="95.047" step="0.95047">
+            </label> 
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                Y:
+              </span>
+              <input type="range" id="xyz_y_range" min="0" max="100" step="1">
+            </label>
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                Z:
+              </span>
+              <input type="range" id="xyz_z_range" min="0" max="108.883" step="1.08883">
+            </label> 
+          </div>
+        </div>
+        <div class="container-range">
+          <div class="container">
+            <label>
+              <span>
+                L:
+              </span>
+              <input type="range" id="lab_l_range" min="0" max="100" step="1">
+            </label> 
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                A:
+              </span>
+              <input type="range" id="lab_a_range" min="-128" max="127" step="2.55">
+            </label> 
+          </div>
+          <div class="container">
+            <label>
+              <span>
+                B:
+              </span>
+              <input type="range" id="lab_b_range" min="-128" max="127" step="2.55">
+            </label> 
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="color-input">
+        <label>
+          <span>
+            Color picker:
+          </span>
+          <input type="color" id="color-picker">
+        </label>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
