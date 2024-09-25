@@ -45,21 +45,21 @@ const colorPicker = document.getElementById("color-picker");
 /--------------------------------------SET VALUES-------------------------------------/;
 //-------------------TEXT-------------------------/
 const setTextHSV = (HSV) => {
-  hText.value = HSV[0];
-  sText.value = HSV[1];
-  vText.value = HSV[2];
+  hText.value = HSV[0].toFixed(2);
+  sText.value = HSV[1].toFixed(2);
+  vText.value = HSV[2].toFixed(2);
 };
 
 const setTextXYZ = (XYZ) => {
-  xText.value = XYZ[0];
-  yText.value = XYZ[1];
-  zText.value = XYZ[2];
+  xText.value = XYZ[0].toFixed(2);
+  yText.value = XYZ[1].toFixed(2);
+  zText.value = XYZ[2].toFixed(2);
 };
 
 const setTextLAB = (LAB) => {
-  lText.value = LAB[0];
-  aText.value = LAB[1];
-  bText.value = LAB[2];
+  lText.value = LAB[0].toFixed(2);
+  aText.value = LAB[1].toFixed(2);
+  bText.value = LAB[2].toFixed(2);
 };
 
 //-------------------RANGE-------------------------/
